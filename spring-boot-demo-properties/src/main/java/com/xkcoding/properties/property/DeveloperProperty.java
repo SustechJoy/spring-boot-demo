@@ -17,6 +17,10 @@ import org.springframework.stereotype.Component;
  * @version: V1.0
  * @modified: yangkai.shen
  */
+
+/**
+ * the second way of accessing property
+ */
 @Data
 @ConfigurationProperties(prefix = "developer")
 @Component

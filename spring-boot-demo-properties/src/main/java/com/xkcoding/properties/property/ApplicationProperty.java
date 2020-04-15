@@ -17,6 +17,10 @@ import org.springframework.stereotype.Component;
  * @version: V1.0
  * @modified: yangkai.shen
  */
+
+/**
+ * the first way of accessing property
+ */
 @Data
 @Component
 public class ApplicationProperty {
