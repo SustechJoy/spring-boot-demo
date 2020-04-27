@@ -33,10 +33,27 @@ import java.util.Objects;
 public class AopLog {
 	private static final String START_TIME = "request-start";
 
+    /**
+     * the execution of any public method:
+     * execution(public * *(..))
+     *
+     * the execution of any method with a name beginning with "set":
+     * execution(* set*(..))
+     *
+     * the execution of any method defined by the AccountService interface:
+     * execution(* com.xyz.service.AccountService.*(..))//常用
+     *
+     * the execution of any method defined in the service package:
+     * execution(* com.xyz.service.*.*(..))//常用
+     *
+     * the execution of any method defined in the service package or a sub-package:
+     * execution(* com.xyz.service..*.*(..))//常用
+     */
+
 	/**
 	 * 切入点
 	 */
-	@Pointcut("execution(public * com.xkcoding.log.aop.controller.*Controller.*(..))")
+	@Pointcut("execution(public * com.xkcoding.log.aop.controller.TestController.*test(..))")
 	public void log() {
 
 	}

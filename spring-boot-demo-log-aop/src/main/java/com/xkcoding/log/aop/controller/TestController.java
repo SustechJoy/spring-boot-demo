@@ -32,4 +32,9 @@ public class TestController {
 		return Dict.create().set("who", StrUtil.isBlank(who) ? "me" : who);
 	}
 
+	@GetMapping("/testInvalid")
+    public Dict testInvalid(String who) {
+        return Dict.create().set("who", StrUtil.isBlank(who) ? "me" : who);
+    }
+
 }
